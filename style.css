@@ -1,0 +1,47 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  margin: 0;
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-rate {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.star-rate__star-label, .star-rate__star-label:hover {
+  cursor: pointer;
+}
+
+.star-rate__star-label {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #C8C8C8;
+}
+
+.star-rate__star-label:hover ~ .star-rate__star-label, .star-rate__star-label:hover {
+  color: #00ACED;
+}
+
+.star-rate__star {
+  position: absolute;
+  left: -500px;
+}
+
+.star-rate__star:checked ~ .star-rate__star-label {
+  color: #00ACED;  
+}
+
